@@ -1,12 +1,13 @@
 import React from 'react'
 import './App.css'
 import Navbar from './Compontants/Landing/Navbar'
-import Footer from './Compontants/Landing/Footer'
+// import Footer from './Compontants/Landing/Footer'
 import Home from './Compontants/Home/home'
 import { Route, Routes } from 'react-router-dom'
 import Tasks from './Compontants/AllTasks/Tasks'
 import PersonalPage from './Compontants/PersonalPage/PersonalPage'
 import Setting from './Compontants/Setting/Setting'
+import Fav from './Compontants/AllTasks/Fav'
 
 
 export default function App() {
@@ -15,10 +16,11 @@ export default function App() {
   <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/tasks' element={<Tasks />}  />
+    <Route path='/favorites' element={<Fav />} />
     <Route path='/personal-page' element={<PersonalPage />}  />
     <Route path='/Setting' element={<Setting />}  />
   </Routes>
-  <Footer />
+  {/* <Footer /> */}
   </>
 }
 

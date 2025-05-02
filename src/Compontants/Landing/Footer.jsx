@@ -4,7 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
-  return (
+  return <>
 <footer className="bg-pink-500 text-white py-6 mt-12">
   <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
     
@@ -31,7 +31,7 @@ export default function Footer() {
 </footer>
 
 
-  )
+</>
 }
 
 

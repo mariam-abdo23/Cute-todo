@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function PersonalPage() {
-  return (
+  return <>
     <div>PersonalPage</div>
-  )
+  </>
 }

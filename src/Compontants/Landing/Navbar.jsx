@@ -9,19 +9,23 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return <>
- <div id='top'>
-<nav className= "fixed top-0 left-0 w-full bg-pink-500 p-4 shadow-lg z-50">
+<nav className= "fixed top-0 left-0 w-full bg-pink-500 p-4 shadow-lg z-50" id='#top'>
   <div className="container mx-auto flex items-center justify-between">
     <button onClick={() => setIsOpen(true)} className="text-2xl">
-      <FontAwesomeIcon className='text-white' icon={faBarsStaggered} />
+    <FontAwesomeIcon
+  className="text-white cursor-pointer hover:text-pink-200 transform transition-transform duration-300 hover:scale-110"
+  icon={faBarsStaggered}
+/>
+
     </button>
-    <NavLink to={"/notifications"} className="text-white text-2xl flex items-center gap-1">
+    <NavLink to={"/notifications"} className="text-white text-2xl flex items-center gap-1  hover:text-pink-200 transform transition-transform duration-300 hover:scale-110">
   <FontAwesomeIcon icon={faBell} />
 </NavLink>
 
   </div>
 </nav>
-</div>
       <Sidebar isOpen={isOpen} closeSidebar={() => setIsOpen(false)} />
     </>
 }
+
+

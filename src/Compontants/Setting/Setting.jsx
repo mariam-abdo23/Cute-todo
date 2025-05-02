@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Setting() {
-  return (
+  return <>
     <div>Setting</div>
-  )
+    </>
 }

@@ -8,10 +8,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function Sidebar({ isOpen, closeSidebar }) {
-  return (
+  return <>
     <div className={`fixed top-0 left-0 h-full w-64 bg-pink-200 shadow-2xl transform transition-transform duration-300 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <button onClick={closeSidebar} className="text-pink-600 text-2xl p-4">
-        <FontAwesomeIcon icon={faCircleXmark} />
+        <FontAwesomeIcon className='cursor-pointer' icon={faCircleXmark} />
       </button>
       <ul className="p-4 space-y-4">
         <li>
@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, closeSidebar }) {
         </li>
         <li>
           <NavLink to={"/personal-page"} className={({ isActive }) => isActive ? "text-pink-600 font-bold" : ""}>
-            <FontAwesomeIcon icon={faUser} /> Personal Page
+            <FontAwesomeIcon icon={faUser} /> Perfoile
           </NavLink>
         </li>
         <li>
@@ -51,7 +51,7 @@ export default function Sidebar({ isOpen, closeSidebar }) {
         </li>
       </ul>
     </div>
-  );
+    </>
 }
 
 
